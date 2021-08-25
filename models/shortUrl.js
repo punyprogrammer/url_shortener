@@ -15,7 +15,8 @@ const shortUrlSchema= new mongoose.Schema({
         type:Number,
         required:true,
         default:0
-    }
+    },
+    expire_at: {type: Date, default: Date.now, expires: 1296000} 
    
 }, {timestamps: true})
 module.exports=mongoose.model('ShortUrl',shortUrlSchema);
